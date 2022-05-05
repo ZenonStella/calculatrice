@@ -18,7 +18,7 @@
         <div class="screen border border-dark col-8">
             <div id="calcul"></div>
             <div class="text-end" id="result1"></div>
-            <div id="calcul2"></div>
+            <div id="result2"></div>
             <div class="text-end" id="result3"></div>
         </div>
     </div>
@@ -27,25 +27,25 @@
             <button id="btn7" onclick="getNumber(7)" class="col-3 border border-white shadow fw-bold btn btn-secondary">7</button>
             <button id="btn8" onclick="getNumber(8)" class="col-3 border border-white shadow fw-bold btn btn-secondary">8</button>
             <button id="btn9" onclick="getNumber(9)" class="col-3 border border-white shadow fw-bold btn btn-secondary">9</button>
-            <button id="btn%" onclick="" class="col-3 border border-white shadow fw-bold btn btn-warning">%</button>
+            <button id="btn%" onclick="getAddOperator('/')" class="col-3 border border-white shadow fw-bold btn btn-warning">%</button>
         </div>
         <div class="row">
             <button id="btn4" onclick="getNumber(4)" class="col-3 border border-white shadow fw-bold btn btn-secondary">4</button>
             <button id="btn5" onclick="getNumber(5)" class="col-3 border border-white shadow fw-bold btn btn-secondary">5</button>
             <button id="btn6" onclick="getNumber(6)" class="col-3 border border-white shadow fw-bold btn btn-secondary">6</button>
-            <button id="btnx" onclick="" class="col-3 border border-white shadow fw-bold btn btn-warning">x</button>
+            <button id="btnx" onclick="getAddOperator('x')" class="col-3 border border-white shadow fw-bold btn btn-warning">x</button>
         </div>
         <div class="row">
             <button id="btn1" onclick="getNumber(1)" class="col-3 border border-white shadow fw-bold btn btn-secondary">1</button>
             <button id="btn2" onclick="getNumber(2)" class="col-3 border border-white shadow fw-bold btn btn-secondary">2</button>
             <button id="btn3" onclick="getNumber(7)" class="col-3 border border-white shadow fw-bold btn btn-secondary">3</button>
-            <button id="btn-" onclick="" class="col-3 border border-white shadow fw-bold btn btn-warning">-</button>
+            <button id="btn-" onclick="getAddOperator('-')" class="col-3 border border-white shadow fw-bold btn btn-warning">-</button>
         </div>
         <div class="row">
             <button id="btn0" onclick="getNumber(0)" class="col-3 border border-white shadow fw-bold btn btn-secondary">0</button>
             <button id="btn." onclick="" class="col-3 border border-white shadow fw-bold btn btn-secondary">.</button>
             <button id="btn=" onclick="" class="col-3 border border-white shadow fw-bold btn btn-danger">=</button>
-            <button id="btn+" onclick="" class="col-3 border border-white shadow fw-bold btn btn-warning">+</button>
+            <button id="btn+" onclick="getAddOperator('+')" class="col-3 border border-white shadow fw-bold btn btn-warning">+</button>
         </div>
         <div class="row">
             <button id="btnCE" class="col border border-white shadow fw-bold btn btn-outline-danger">CE</button>
