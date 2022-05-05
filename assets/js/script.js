@@ -10,11 +10,11 @@ let result = document.getElementById('result');
 
 function getNumber(val) {
     // line.innerHTML += val
-if (calcul.innerHTML != '') {
-    nb2.innerHTML += val
-}else{
-    nb1.innerHTML += val
-}
+    if (calcul.innerHTML != '') {
+        nb2.innerHTML += val
+    } else {
+        nb1.innerHTML += val
+    }
 }
 function getAddOperator(operator) {
     calcul.innerText = operator;
@@ -25,9 +25,27 @@ function reset() {
     nb2.innerHTML = '';
     calcul.innerHTML = '';
     result.innerHTML = '';
+    // line = nb1;
 }
 function equals() {
-    let equal = Number(nb1.innerHTML) + Number(nb2.innerHTML);
+    let equal = 0;
+    switch (calcul.innerHTML) {
+        case '+':
+            equal = Number(nb1.innerHTML) + Number(nb2.innerHTML);
+            break;
+        case '-':
+            equal = Number(nb1.innerHTML) - Number(nb2.innerHTML);
+            break;
+        case 'x':
+            equal = Number(nb1.innerHTML) * Number(nb2.innerHTML);
+            break;
+        case '/':
+            equal = Number(nb1.innerHTML) / Number(nb2.innerHTML);
+            break;
+
+        default:
+            break;
+    }
     result.innerHTML = equal;
 }
 
