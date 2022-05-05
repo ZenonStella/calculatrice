@@ -4,20 +4,21 @@ let nb2 = document.getElementById('nb2');
 let result = document.getElementById('result');
 
 
+
 // var qui determine le lieu de stokage des chiffres
-let line = nb1;
+// let line = nb1;
 
 function getNumber(val) {
-    line.innerHTML += val
-// if (calcul.innerHTML != '') {
-//     nb2.innerHTML += val
-// }else{
-//     nb1.innerHTML += val
-// }
+    // line.innerHTML += val
+if (calcul.innerHTML != '') {
+    nb2.innerHTML += val
+}else{
+    nb1.innerHTML += val
+}
 }
 function getAddOperator(operator) {
     calcul.innerText = operator;
-    line = nb2;
+    // line = nb2;
 }
 function reset() {
     nb1.innerHTML = '';
@@ -25,3 +26,8 @@ function reset() {
     calcul.innerHTML = '';
     result.innerHTML = '';
 }
+function equals() {
+    let equal = Number(nb1.innerHTML) + Number(nb2.innerHTML);
+    result.innerHTML = equal;
+}
+
